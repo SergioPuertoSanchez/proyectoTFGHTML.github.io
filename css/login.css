@@ -1,0 +1,114 @@
+@charset "UTF-8";
+/*Tamaños*/
+body {
+  background-image: url(../imagenes/fondo2.png);
+  background-size: cover;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 5%;
+  padding-bottom: 4%;
+}
+
+.card {
+  width: 45%;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.logo a img {
+  width: 120px;
+}
+.logo h1 {
+  font-size: 2.5em;
+}
+
+.formulario {
+  align-self: center;
+  width: 80%;
+}
+
+.form-group label {
+  font-size: 0.9em;
+  font-weight: bold;
+}
+
+.boton button {
+  margin-bottom: 16px;
+  font-size: 1em;
+}
+
+.errores {
+  text-align: center;
+  margin-bottom: 16px;
+  color: red;
+}
+
+.enlaces {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.enlaces a {
+  margin-bottom: 16px;
+  font-size: 1em;
+}
+
+.redes {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 16px;
+}
+
+.politicas {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 0.7em;
+}
+
+@media (max-width: 1200px) {
+  .card {
+    width: 60%;
+  }
+}
+@media (max-width: 990px) {
+  .card {
+    width: 80%;
+  }
+}
+@media (max-width: 768px) {
+  .card {
+    width: 100%;
+  }
+}
+@media (max-width: 354px) {
+  .logo h1 {
+    font-size: 1.5em;
+  }
+  .enlaces a {
+    font-size: 0.7em;
+  }
+}
+@media (min-width: 376px) and (min-height: 835px) {
+  body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+/*# sourceMappingURL=login.css.map */

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Iniciar sesión</title>       
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> 
+        <link href="../css/login.css" rel="stylesheet" type="text/css">  
+    </head>
+    <body>
+        <section class="container">
+            <div class="card pt-3 pb-4 px-4">
+                <div class="card-body">
+                    <div class="logo">
+                        <a href=""><img src = "../imagenes/Logo.png" alt="Logo"></a>
+                        <h1 class="encabezado">Iniciar sesión</h1>
+                    </div>
+
+                    <form class="formulario my-3" action="login" method="post">
+                        <div class="form-group">
+                            <label class="form-label" for="typeEmailX">Nombre de usuario</label>
+                            <input type="text" id="typeEmailX" class="form-control"/>                               
+                        </div>
+                  
+                        <div class="form-group">
+                            <label class="form-label" for="id_password">Contraseña</label>
+                            <input type="password" name="password" class="form-control" id="id_password"/>                                
+                        </div>
+                            
+                        <div class="errores">
+                            <ex:erroresLogin error="<%=errorLogin %>" tipo="login"/>
+				            <ex:erroresLogin error="<%=errorVerificacion %>" tipo="verificacion"/>
+                        </div>
+                            
+                        <div class="enlaces">
+                            <a href="recuperarUsuario">Olvidaste usuario</a>
+                            <a href="cambiarPassword">Olvidaste contraseña</a>                                
+                        </div>
+                                
+                        <div class="boton">
+                            <button class="btn btn-primary btn-lg btn-block" type="submit">Iniciar</button>
+                        </div>                                                     
+                    </form>
+                                       
+                    <form class="formulario" action="registro" method="get">
+                        <div class="boton">
+                            <button class="btn btn-primary btn-lg btn-block" type="submit">Registrarse</button>
+                        </div>    
+                    </form>
+
+                    <div class="redes">
+                        <a href=""><img src = "../imagenes/32px-ig.png" alt="Instagram"></a>
+                        <a href=""><img src = "../imagenes/32px-fb.png" alt="Facebook"></a>
+                        <a href=""><img src = "../imagenes/32px-tw.png" alt="Twitter"></a>
+                    </div>
+
+                    <div class="politicas">
+                        <p>Al iniciar sesión en JiyuDraw, confirmo que he leído y acepto los Términos de servicio de JiyuDraw, 
+                            la Política de privacidad y recibir correos electrónicos y actualizaciones.
+                        </p>
+                    </div>
+                </div>
+            </div>              
+        </section>       
+    </body>
+</html>

@@ -1,5 +1,6 @@
 @charset "UTF-8";
 /*Tamaños*/
+/*Colores*/
 body {
   background-image: url(../imagenes/fondo2.png);
   background-size: cover;
@@ -33,6 +34,15 @@ body {
 .logo a img {
   width: 120px;
 }
+.logo a:hover {
+  opacity: 0.5;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity = 70);
+  filter: alpha(opacity=70);
+  transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+}
 .logo h1 {
   font-size: 2.5em;
 }
@@ -43,8 +53,18 @@ body {
 }
 
 .form-group label {
-  font-size: 0.9em;
+  font-size: 1em;
   font-weight: bold;
+}
+.form-group .form-control:hover {
+  border: solid 1px #094592;
+  opacity: 0.5;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity = 70);
+  filter: alpha(opacity=70);
+  transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
 }
 
 .boton button {
@@ -55,6 +75,7 @@ body {
 .errores {
   text-align: center;
   margin-bottom: 16px;
+  font-size: 1em;
   color: red;
 }
 
@@ -66,12 +87,22 @@ body {
 .enlaces a {
   margin-bottom: 16px;
   font-size: 1em;
+  text-decoration: none;
 }
 
 .redes {
   display: flex;
   justify-content: space-evenly;
   margin-top: 16px;
+}
+.redes a:hover {
+  opacity: 0.5;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity = 70);
+  filter: alpha(opacity=70);
+  transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
 }
 
 .politicas {
@@ -95,15 +126,47 @@ body {
     width: 100%;
   }
 }
-@media (max-width: 354px) {
-  .logo h1 {
-    font-size: 1.5em;
-  }
-  .enlaces a {
-    font-size: 0.7em;
+@media (max-width: 500px) {
+  .enlaces {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
-@media (min-width: 376px) and (min-height: 835px) {
+@media (max-width: 354px) {
+  .logo h1 {
+    font-size: 1.9em;
+  }
+  .logo a img {
+    width: 100px;
+  }
+  .form-group label {
+    font-size: 0.8em;
+  }
+  .boton button {
+    margin-bottom: 10px;
+    font-size: 0.8em;
+  }
+  .enlaces a {
+    font-size: 0.8em;
+  }
+  .politicas {
+    margin-top: 10px;
+    font-size: 0.5em;
+  }
+  .redes {
+    margin-top: 12px;
+  }
+  .redes a img {
+    width: 25px;
+  }
+}
+@media (max-width: 299px) {
+  .logo h1 {
+    text-align: center;
+  }
+}
+@media (min-width: 242px) and (min-height: 793px) {
   body {
     height: 100vh;
     margin: 0;

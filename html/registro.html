@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Registro</title>
+        <link rel="icon" type="image/png" href="../imagenes/Logo.png"> 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kolker+Brush&family=Lato:wght@400;700&family=Poppins:wght@100;400;700;900&family=Reggae+One&family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> 
+        <link href="../css/registro.css" rel="stylesheet" type="text/css">
+          
+    </head>
+    <body>
+        <section class="container">                
+            <div class="registro row">
+                <div class="registro__izq col-5">  
+                    <div class="info">
+                        <h3>Unete a la mejor comunidad de arte online del mundo.</h3>
+                        <p>Obtenga acceso gratuito a 550 millones de obras de arte.
+                            Muestre, promueva, venda y comparta su trabajo con más de 75 millones de miembros.
+                        </p>
+                    </div>                                                                                
+                    <div class="redes__izq">
+                        <a href="https://www.instagram.com/"><img src = "../imagenes/32px-ig-bl.png" alt="Instagram"></a>
+                        <a href="https://www.facebook.com/"><img src = "../imagenes/32px-fb-bl.png" alt="Facebook"></a>
+                        <a href="https://twitter.com/"><img src = "../imagenes/32px-tw-bl.png" alt="Twitter"></a>
+                    </div>                       
+                </div>
+                
+                <div class="registro__drch col-7">                                                                                                             
+                    <div class="logo">
+                        <a href=""><img src="../imagenes/Logo.png" alt="Logo"></a>
+                        <h1>JiguDraw</h1>
+                    </div>
+                            
+                    <form class="formulario" action="registro" method="post">
+                        <h4>Registrate gratis</h4>           
+                        <div class="form-group">
+                            <label class="form-label" for="id_nombre">Nombre y apellidos</label>
+                            <input type="text" name="nombre" class="form-control" id="id_nombre"/>                               
+                        </div>
+                        
+                        <div class="form-group">                                                           
+                            <label class="form-label" for="id_email">Email</label>                                
+                            <div class="error">
+                                <ex:erroresRegistro error="<%=errorEmailExiste %>" tipo="errorEmailExiste"/>
+                                <ex:erroresRegistro error="<%=errorFormatoEmail %>" tipo="errorFormatoEmail"/>
+                            </div>                                                                                          
+                            <input type="text" name="email" class="form-control" id="id_email"/>                                                           
+                        </div>
+                                    
+                        <div class="form-group">                                                           
+                            <label class="form-label" for="id_nick">Nombre de usuario</label>                                
+                            <div class="error">
+                                <ex:erroresRegistro error="<%=errorNicknameExiste %>" tipo="errorNicknameExiste"/>
+                            </div>                                                                                                                          
+                            <input type="text" name="nickname" class="form-control" id="id_nick"/>                               
+                        </div>
+
+                        <div class="password row">
+                            <div class="password__izq col-lg-6">
+                                <div class="form-group">
+                                    <label class="form-label" for="id_password">Contraseña</label>
+                                    <input type="password" name="password" class="form-control" id="id_password"/>                                
+                                </div>
+                            </div>
+                            
+                            <div class="password__drch col-lg-6">
+                                <div class="form-group">
+                                    <label class="form-label" for="id_passRepetido">Confirmar contraseña</label>
+                                    <input type="password" name="passwordRepetido" class="form-control" id="id_passRepetido"/>                                
+                                </div>
+                            </div>                            
+                        </div>
+                                 
+                        <div class="errores">                                                       			
+                            <ex:erroresRegistro error="<%=errorPassword %>" tipo="errorPassword"/>					
+                            <ex:erroresRegistro error="<%=errorCampoLongitud %>" tipo="errorCampoLongitud"/>
+                            <ex:erroresRegistro error="<%=errorCampoVacio %>" tipo="errorCampoVacio"/>			
+                            <ex:erroresRegistro error="<%=errorEmailEnviado %>" tipo="errorEmailEnviado"/>		
+                        </div>
+                        
+                        <div class="boton">
+                            <button class="btn btn-primary btn-lg btn-block" type="submit">Registrarse</button>
+                        </div>
+
+                        <div class="login">
+                            <p>¿Ya eres un miembro? <a href="login.html">Iniciar sesión</a></p>
+                        </div>
+                        
+                        <div class="redes__drch">
+                            <a href="https://www.instagram.com/"><img src = "../imagenes/32px-ig.png" alt="Instagram"></a>
+                            <a href="https://www.facebook.com/"><img src = "../imagenes/32px-fb.png" alt="Facebook"></a>
+                            <a href="https://twitter.com/"><img src = "../imagenes/32px-tw.png" alt="Twitter"></a>
+                        </div>  
+
+                        <div class="politicas">
+                            <p>Al registrarme en JiyuDraw, confirmo que he leído y acepto los Términos de servicio de JiyuDraw, 
+                                la Política de privacidad y recibir correos electrónicos y actualizaciones.
+                            </p>
+                        </div>                        
+                    </form>                    	                          
+                </div>          
+            </div>    
+        </section>
+    </body>
+</html>

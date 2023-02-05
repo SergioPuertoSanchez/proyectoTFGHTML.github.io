@@ -11,18 +11,18 @@ $enlace-2:.8em;
 $img-logo-2:100px;
 
 body{
-    background-image: url(../imagenes/patron-de-cuadros-negros_3840x2400_xtrafondos.com.jpg);
-    background-size: cover;   
+    background-image: url(../imagenes/fondo.jpg);
+    background-size: cover;
+    font-family: $roboto;    
 }
 
-.container{   
-    height: 100%;
+.container{       
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-top: 5%;
-    padding-bottom: 4%;
+    height: 100%;
+    padding: 25px 0px 25px 0px;  
 }
 
 .card{       
@@ -39,7 +39,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;  
+    justify-content: center; 
 
     a{
         img{
@@ -95,7 +95,6 @@ body{
 }
 
 .errores{
-    text-align: center;
     margin-bottom: 16px;
     font-size: $errores;
     color: $color-error;
@@ -130,7 +129,7 @@ body{
 }
 
 .politicas{
-    margin-top: 15px;
+    margin-top: 16px;
     text-align: center;
     font-size: $politicas;
 }
@@ -153,6 +152,30 @@ body{
     }
 }
 
+@media (max-width: 575px) {
+    body{
+       background: $color-blanco;  
+    }
+
+    .logo{
+        padding-bottom: 30px;
+    }
+
+    .card{
+        border: none;
+        padding: 25px 0;
+        margin: 0;
+    }
+
+    .card-body{       
+        padding: 0;
+    }
+
+    .politicas{
+        padding: 15px 50px;
+    }
+}
+
 @media (max-width: 500px) {
     .enlaces{
         display: flex; 
@@ -161,9 +184,10 @@ body{
     }
 }
 
-@media (max-width: 354px) {   
+@media (max-width: 300px) {   
     .logo{
         h1{
+            text-align: center;
             font-size: $h1-2;
         }
 
@@ -195,7 +219,7 @@ body{
 
     .politicas{
         margin-top: 10px;
-        font-size: $politicas-2;
+        font-size: $politicas;
     }
 
     .redes{
@@ -209,40 +233,11 @@ body{
     }
 }
 
-@media (min-width: 299px) {
-    .logo{
-        h1{
-            text-align: center;           
-        }
-    }  
-}
-
 @media (min-width: 242px) and (min-height: 793px){   
     body{
         height: 100vh;
         margin: 0;
         padding: 0;
-    }
-}
-
-@media (max-width: 575px) {
-    body{
-       background: $color-blanco;  
-    }
-
-    .card{
-        border: none;
-        padding: 25px 0;
-        margin: 0;
-    }
-
-    .card-body{
-        
-        padding: 0;
-    }
-
-    .politicas{
-        padding: 0px 50px;
     }
 }
 
@@ -256,15 +251,23 @@ body{
         
     }
 
-    .container{      
+    .container{    
         min-width: 100%;
     }
 
     .card{
-        padding: 25px 0px;
-       
+        padding: 0;
         border: none;
         min-width: 100%;
+    }
+
+    .boton{
+        margin-top: 8px;
+    }
+
+    .enlaces{
+        margin-top: 20px;
+        margin-bottom: 20px;
     }
 
     .politicas{

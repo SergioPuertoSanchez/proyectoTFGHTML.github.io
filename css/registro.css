@@ -2,7 +2,7 @@
 /*Colores*/
 /*Variables*/
 body {
-  background-image: url(../imagenes/patron-de-cuadros-negros_3840x2400_xtrafondos.com.jpg);
+  background-image: url(../imagenes/fondo.jpg);
   background-size: cover;
   font-family: "Roboto";
 }
@@ -140,9 +140,12 @@ body {
 }
 
 .login {
+  display: flex;
+  flex-direction: row;
   padding: 0px 5px 0px 5px;
 }
 .login a {
+  padding-left: 5px;
   text-decoration: none;
 }
 
@@ -231,12 +234,8 @@ body {
   .logo a img {
     width: 90px;
   }
-}
-@media (max-width: 575px) and (max-height: 792px) {
-  .logo {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 10px;
+  .form-group label {
+    font-size: 0.9em;
   }
 }
 @media (max-width: 310px) {
@@ -250,11 +249,26 @@ body {
     margin-top: 10px;
   }
 }
-@media (min-width: 242px) and (min-height: 793px) {
-  body {
-    height: 100vh;
-    margin: 0;
+@media (max-width: 245px) {
+  .login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 0;
+  }
+  .login a {
+    padding-left: 0px;
+    text-decoration: none;
+  }
+  .redes__drch {
+    margin-top: 20px;
+  }
+}
+@media (max-width: 575px) and (max-height: 792px) {
+  .logo {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
   }
 }
 @media (max-width: 950px) and (max-height: 420px) {
@@ -272,6 +286,13 @@ body {
   }
   .registro__drch {
     min-width: 100%;
+  }
+}
+@media (min-width: 245px) and (min-height: 793px) {
+  body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
   }
 }
 

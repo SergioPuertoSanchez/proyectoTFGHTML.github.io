@@ -4,7 +4,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Iniciar sesión</title>
-        <link rel="icon" type="image/png" href="../imagenes/Logo.png">       
+        <link rel="icon" type="image/png" href="../imagenes/Logo-sin-fondo.png">
+        <link href="https://fonts.googleapis.com/css2?family=Kolker+Brush&family=Lato:wght@400;700&family=Poppins:wght@100;400;700;900&family=Reggae+One&family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">       
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> 
         <link href="../css/login.css" rel="stylesheet" type="text/css">  
     </head>
@@ -29,8 +30,9 @@
                         </div>
                             
                         <div class="errores">
-                            <ex:erroresLogin error="<%=errorLogin %>" tipo="login"/>
-				            <ex:erroresLogin error="<%=errorVerificacion %>" tipo="verificacion"/>
+                            <ex:erroresLogin error="<%=errorLogin%>" tipo="login"/>
+				            <ex:erroresLogin error="<%=errorVerificacion%>" tipo="verificacion"/>
+				             <ex:erroresRegistro error="<%=errorCampoVacio%>" tipo="errorCampoVacio"/>
                         </div>
                             
                         <div class="enlaces">
@@ -45,14 +47,14 @@
                                        
                     <form class="formulario" action="registro" method="get">
                         <div class="boton">
-                            <button class="btn btn-primary btn-lg btn-block" type="submit"><a style="text-decoration: none; color: white;" href="registro.html">Registrarse</a></button>
+                            <button class="btn btn-primary btn-lg btn-block" type="submit">Registrarse</button>
                         </div>    
                     </form>
 
                     <div class="redes">
-                        <a href="https://www.instagram.com/"><img src = "../imagenes/32px-ig.png" alt="Instagram"></a>
-                        <a href="https://www.facebook.com/"><img src = "../imagenes/32px-fb.png" alt="Facebook"></a>
-                        <a href="https://twitter.com/"><img src = "../imagenes/32px-tw.png" alt="Twitter"></a>
+                        <a href="https://www.instagram.com/"><img src="../imagenes/32px-ig.png" alt="Instagram"></a>
+                        <a href="https://www.facebook.com/"><img src="../imagenes/32px-fb.png" alt="Facebook"></a>
+                        <a href="https://twitter.com/"><img src="../imagenes/32px-tw.png" alt="Twitter"></a>
                     </div>
 
                     <div class="politicas">

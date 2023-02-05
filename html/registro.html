@@ -4,9 +4,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Registro</title>
-        <link rel="icon" type="image/png" href="../imagenes/Logo.png"> 
+        <link rel="icon" type="image/png" href="../imagenes/Logo-sin-fondo.png"> 
         <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Kolker+Brush&family=Lato:wght@400;700&family=Poppins:wght@100;400;700;900&family=Reggae+One&family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> 
         <link href="../css/registro.css" rel="stylesheet" type="text/css">
@@ -23,9 +22,9 @@
                         </p>
                     </div>                                                                                
                     <div class="redes__izq">
-                        <a href="https://www.instagram.com/"><img src = "../imagenes/32px-ig-bl.png" alt="Instagram"></a>
-                        <a href="https://www.facebook.com/"><img src = "../imagenes/32px-fb-bl.png" alt="Facebook"></a>
-                        <a href="https://twitter.com/"><img src = "../imagenes/32px-tw-bl.png" alt="Twitter"></a>
+                        <a href="https://www.instagram.com/"><img src="../imagenes/32px-ig-bl.png" alt="Instagram"></a>
+                        <a href="https://www.facebook.com/"><img src="../imagenes/32px-fb-bl.png" alt="Facebook"></a>
+                        <a href="https://twitter.com/"><img src="../imagenes/32px-tw-bl.png" alt="Twitter"></a>
                     </div>                       
                 </div>
                 
@@ -45,8 +44,8 @@
                         <div class="form-group">                                                           
                             <label class="form-label" for="id_email">Email</label>                                
                             <div class="error">
-                                <ex:erroresRegistro error="<%=errorEmailExiste %>" tipo="errorEmailExiste"/>
-                                <ex:erroresRegistro error="<%=errorFormatoEmail %>" tipo="errorFormatoEmail"/>
+                                <ex:erroresRegistro error="<%=errorEmailExiste%>" tipo="errorEmailExiste"/>
+                                <ex:erroresRegistro error="<%=errorFormatoEmail%>" tipo="errorFormatoEmail"/>
                             </div>                                                                                          
                             <input type="text" name="email" class="form-control" id="id_email"/>                                                           
                         </div>
@@ -54,7 +53,7 @@
                         <div class="form-group">                                                           
                             <label class="form-label" for="id_nick">Nombre de usuario</label>                                
                             <div class="error">
-                                <ex:erroresRegistro error="<%=errorNicknameExiste %>" tipo="errorNicknameExiste"/>
+                                <ex:erroresRegistro error="<%=errorNicknameExiste%>" tipo="errorNicknameExiste"/>
                             </div>                                                                                                                          
                             <input type="text" name="nickname" class="form-control" id="id_nick"/>                               
                         </div>
@@ -76,10 +75,10 @@
                         </div>
                                  
                         <div class="errores">                                                       			
-                            <ex:erroresRegistro error="<%=errorPassword %>" tipo="errorPassword"/>					
-                            <ex:erroresRegistro error="<%=errorCampoLongitud %>" tipo="errorCampoLongitud"/>
-                            <ex:erroresRegistro error="<%=errorCampoVacio %>" tipo="errorCampoVacio"/>			
-                            <ex:erroresRegistro error="<%=errorEmailEnviado %>" tipo="errorEmailEnviado"/>		
+                            <ex:erroresRegistro error="<%=errorPassword%>" tipo="errorPassword"/>					
+                            <ex:erroresRegistro error="<%=errorCampoLongitud%>" tipo="errorCampoLongitud"/>
+                            <ex:erroresRegistro error="<%=errorCampoVacio%>" tipo="errorCampoVacio"/>			
+                            <ex:erroresRegistro error="<%=errorEmailEnviado%>" tipo="errorEmailEnviado"/>		
                         </div>
                         
                         <div class="boton">
@@ -87,13 +86,13 @@
                         </div>
 
                         <div class="login">
-                            <p>¿Ya eres un miembro? <a href="login.html">Iniciar sesión</a></p>
+                            <p>¿Ya eres un miembro?</p><a href="login">Iniciar sesión</a>
                         </div>
                         
                         <div class="redes__drch">
-                            <a href="https://www.instagram.com/"><img src = "../imagenes/32px-ig.png" alt="Instagram"></a>
-                            <a href="https://www.facebook.com/"><img src = "../imagenes/32px-fb.png" alt="Facebook"></a>
-                            <a href="https://twitter.com/"><img src = "../imagenes/32px-tw.png" alt="Twitter"></a>
+                            <a href="https://www.instagram.com/"><img src="../imagenes/32px-ig.png" alt="Instagram"></a>
+                            <a href="https://www.facebook.com/"><img src="../imagenes/32px-fb.png" alt="Facebook"></a>
+                            <a href="https://twitter.com/"><img src="../imagenes/32px-tw.png" alt="Twitter"></a>
                         </div>  
 
                         <div class="politicas">

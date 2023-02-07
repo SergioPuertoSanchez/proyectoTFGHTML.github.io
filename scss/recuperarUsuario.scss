@@ -1,0 +1,213 @@
+@import "v-globales";
+@import "v-formularios";
+
+/*Variables*/
+$h1:2.3em;
+$h1-2:2em;
+
+$parrafo:1em;
+$parrafo-2:.8em;
+
+$enlace:1em;
+$enlace-2:.8em;
+
+$img-logo-2:90px;
+
+body{
+    background-image: url(../imagenes/fondo.jpg);
+    background-size: cover;
+    font-family: $roboto;    
+}
+
+.container{       
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 5% 0 5% 0;  
+}
+
+.card{       
+  width: 45%;
+}
+
+.card-body{  
+    display: flex;
+    flex-direction: column;
+}
+
+.logo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+
+    a{
+        img{
+            width: $img-logo;
+        }
+    }
+
+    a:hover{
+        opacity: 0.5;
+        -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity = 70);
+        filter: alpha(opacity = 70);
+        transition-duration: 0.2s;
+        -moz-transition-duration: 0.2s;
+        -webkit-transition-duration: 0.2s;
+        -o-transition-duration: 0.2s;
+    }
+
+    h1{
+        text-align: center;
+        padding-bottom: 5px;
+        font-size: $h1;
+        font-weight: bold;       
+    }
+
+    p{
+        text-align: center;
+        padding: 0px 30px;
+        font-size: $parrafo;
+    }
+}
+
+.formulario{
+    width: 80%;
+    align-self: center;
+    margin-top: 15px;   
+}
+
+.form-group{  
+    label{
+        font-size: $label;
+        font-weight: bold;
+    }
+
+    .form-control:hover{
+        border: solid 1px $color-principal;
+	    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity = 70);
+	    filter: alpha(opacity = 70);
+	    transition-duration: 0.2s;
+        -moz-transition-duration: 0.2s;
+        -webkit-transition-duration: 0.2s;
+        -o-transition-duration: 0.2s;
+    }
+}
+
+.errores{
+    font-size: $errores;
+    color: $color-error;
+    margin-bottom: 8px;
+}
+
+.enlaces{
+    display: flex; 
+    justify-content: space-evenly;  
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+
+    a{       
+        font-size: $enlace;
+        text-decoration: none;
+    }
+}
+
+.boton{  
+    margin-bottom: 40px;
+    button{
+        font-size: $boton; 
+        font-weight: bold;
+        background-color: $color-principal;           
+    }
+}
+
+.redes{
+    display: flex;   
+    justify-content: space-evenly;
+    margin-bottom: 16px;
+    
+    a:hover{
+        opacity: 0.5;
+	    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity = 70);
+	    filter: alpha(opacity = 70);
+	    transition-duration: 0.2s;
+        -moz-transition-duration: 0.2s;
+        -webkit-transition-duration: 0.2s;
+        -o-transition-duration: 0.2s;
+    }
+}
+
+@media (max-width: 1199px) {
+    .card{
+        width: 60%;
+    }
+
+    
+}
+
+@media (max-width: 767px) {
+    .card{
+        width: 80%;
+    }    
+}
+
+@media (max-width: 463px) {
+    .logo{      
+        a{
+            img{
+                width: $img-logo-2;
+            }
+        }
+           
+        h1{       
+            font-size: $h1-2;      
+        }
+    
+        p{
+            padding: 0;           
+         }
+    }
+
+    .card{
+        width: 80%;
+    }  
+    
+    .formulario{
+        width: 90%;      
+        margin-top: 8px;   
+    }
+
+    .redes{
+        img{
+            width: $img-redes;
+        }
+    }
+}
+
+@media (max-width: 313px) {
+    .logo{          
+        p{
+            font-size: $parrafo-2;
+           padding: 0;           
+        }
+    } 
+    
+    .enlaces{
+        font-size: $enlace-2;
+    }
+
+    .formulario{
+        width: 100%;
+        font-size: $label-2;
+    }
+}
+
+@media (min-width: 0px) and (min-height: 620px){   
+    body{
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+    }
+}

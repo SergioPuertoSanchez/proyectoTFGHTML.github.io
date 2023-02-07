@@ -1,0 +1,171 @@
+/*Letras*/
+/*Colores*/
+/*Variables*/
+body {
+  background-image: url(../imagenes/fondo.jpg);
+  background-size: cover;
+  font-family: "Roboto";
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 5% 0 5% 0;
+}
+
+.card {
+  width: 45%;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.logo a img {
+  width: 120px;
+}
+.logo a:hover {
+  opacity: 0.5;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity = 70);
+  filter: alpha(opacity=70);
+  transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+}
+.logo h1 {
+  text-align: center;
+  padding-bottom: 5px;
+  font-size: 2.3em;
+  font-weight: bold;
+}
+.logo p {
+  text-align: center;
+  padding: 0px 30px;
+  font-size: 1em;
+}
+
+.formulario {
+  width: 80%;
+  align-self: center;
+  margin-top: 15px;
+}
+
+.form-group label {
+  font-size: 1em;
+  font-weight: bold;
+}
+.form-group .form-control:hover {
+  border: solid 1px #094592;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity = 70);
+  filter: alpha(opacity=70);
+  transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+}
+
+.errores {
+  font-size: 1em;
+  color: red;
+  margin-bottom: 8px;
+}
+
+.enlaces {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+.enlaces a {
+  font-size: 1em;
+  text-decoration: none;
+}
+
+.boton {
+  margin-bottom: 40px;
+}
+.boton button {
+  font-size: 1em;
+  font-weight: bold;
+  background-color: #094592;
+}
+
+.redes {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 16px;
+}
+.redes a:hover {
+  opacity: 0.5;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity = 70);
+  filter: alpha(opacity=70);
+  transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+}
+
+@media (max-width: 1199px) {
+  .card {
+    width: 60%;
+  }
+}
+@media (max-width: 767px) {
+  .card {
+    width: 80%;
+  }
+}
+@media (max-width: 463px) {
+  .logo a img {
+    width: 90px;
+  }
+  .logo h1 {
+    font-size: 2em;
+  }
+  .logo p {
+    padding: 0;
+  }
+  .card {
+    width: 80%;
+  }
+  .formulario {
+    width: 90%;
+    margin-top: 8px;
+  }
+  .redes img {
+    width: 25px;
+  }
+}
+@media (max-width: 313px) {
+  .logo p {
+    font-size: 0.8em;
+    padding: 0;
+  }
+  .enlaces {
+    font-size: 0.8em;
+  }
+  .formulario {
+    width: 100%;
+    font-size: 0.9em;
+  }
+}
+@media (min-width: 0px) and (min-height: 620px) {
+  body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+/*# sourceMappingURL=recuperarUsuario.css.map */

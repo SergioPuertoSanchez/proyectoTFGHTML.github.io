@@ -3,39 +3,36 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Recuperar usuario</title>
-        <link rel="icon" type="image/png" href="../imagenes/Logo-sin-fondo.png">
+        <title>Enviar código de verificación</title>
+        <link rel="icon" type="../image/png" href="imagenes/Logo-sin-fondo.png">
         <link href="https://fonts.googleapis.com/css2?family=Kolker+Brush&family=Lato:wght@400;700&family=Poppins:wght@100;400;700;900&family=Reggae+One&family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">       
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> 
-        <link href="../css/recuperarUsuario.css" rel="stylesheet" type="text/css">
+        <link href="../css/verificacion.css" rel="stylesheet" type="text/css">
     </head>
     <body>
         <section class="container">
             <div class="card">
                 <div class="card-body">
                     <div class="logo">
-                        <a href=""><img src = "../imagenes/Logo.png" alt="Logo"></a>
-                        <h1 class="encabezado">Recuperar usuario</h1>
-                        <p>Para recuperar tu nombre de usuario, necesitarás el correo electrónico vinculado a tu cuenta.</p>
+                        <a href="verificacrCuenta.html"><img src = "../imagenes/Logo.png" alt="Logo"></a>
+                        <h1 class="encabezado">Verificiación cuenta</h1>
+                        <p>Ponga un email registrado y le enviaremos un código de verificación</p>
                     </div>
-
-                    <form class="formulario" action="recuperarUsuario" method="post">
+                
+                    <form class="formulario" action="verificacion" method="post">
                         <div class="form-group">
                             <label class="form-label" for="id_email">Email</label>
                             <input type="text" name="email" class="form-control" id="id_email"/>                               
                         </div>                       
 
                         <div class="errores">
-                            <ex:RecUsuario error="<%=errorEmail%>" tipo="email"/>
-                            <ex:Formularios error="<%=errorFormato%>" tipo="formatoEmail"/>
-                            <ex:Formularios error="<%=errorEmailEnviado%>" tipo="errorEmailEnviado"/>
-                            <ex:Formularios error="<%=errorCampoVacio%>" tipo="campoVacio"/>
+                            <ex:Email error="<%=emailNoExiste%>" tipo="emailnoExiste"/>				            
+                            <ex:Email error="<%=emailNoEnviado%>" tipo="emailNoEnviado"/>
+                            <ex:Email error="<%=errorFormatoEmail%>" tipo="formatoEmail"/>
+                            <ex:Formato error="<%=campoVacio%>" tipo="campoVacio"/>			
+                            <ex:Usuario error="<%=verificada%>" tipo="verificada"/>
                         </div>
-        
-                        <div class="enlaces">
-                            <a href="">Olvidaste contraseña</a>                                
-                        </div>
-
+                                
                         <div class="boton">
                             <button class="btn btn-primary btn-lg btn-block" type="submit">Enviar</button>
                         </div>
@@ -46,8 +43,8 @@
                         <a href="https://www.facebook.com/"><img src="../imagenes/32px-fb.png" alt="Facebook"></a>
                         <a href="https://twitter.com/"><img src="../imagenes/32px-tw.png" alt="Twitter"></a>
                     </div>
-                </div>
-            </div>
-        </section>
+                </div>    
+            </div>      
+        </section>  
     </body>
 </html>

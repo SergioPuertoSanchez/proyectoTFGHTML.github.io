@@ -17,7 +17,7 @@ body {
 }
 
 .card {
-  width: 45%;
+  width: 40%;
 }
 
 .card-body {
@@ -46,19 +46,19 @@ body {
 .logo h1 {
   text-align: center;
   padding-bottom: 5px;
-  font-size: 2.3em;
+  font-size: 2.2em;
   font-weight: bold;
 }
 .logo p {
   text-align: center;
   padding: 0px 30px;
-  font-size: 1em;
+  font-size: 1.2em;
 }
 
 .formulario {
-  width: 80%;
+  width: 90%;
   align-self: center;
-  margin-top: 15px;
+  margin-top: 20px;
 }
 
 .form-group label {
@@ -76,24 +76,14 @@ body {
 }
 
 .errores {
-  font-size: 1em;
+  font-size: 0.9em;
   color: red;
-  margin-bottom: 8px;
-}
-
-.enlaces {
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  margin-bottom: 16px;
-}
-.enlaces a {
-  font-size: 1em;
-  text-decoration: none;
+  margin-top: 20px;
 }
 
 .boton {
-  margin-bottom: 40px;
+  margin-top: 20px;
+  margin-bottom: 50px;
 }
 .boton button {
   font-size: 1em;
@@ -131,10 +121,11 @@ body {
     width: 90px;
   }
   .logo h1 {
-    font-size: 2em;
+    font-size: 1.9em;
   }
   .logo p {
     padding: 0;
+    font-size: 1em;
   }
   .card {
     width: 80%;
@@ -148,13 +139,6 @@ body {
   }
 }
 @media (max-width: 313px) {
-  .logo p {
-    font-size: 0.8em;
-    padding: 0;
-  }
-  .enlaces {
-    font-size: 0.8em;
-  }
   .formulario {
     width: 100%;
     font-size: 0.9em;
@@ -168,4 +152,4 @@ body {
   }
 }
 
-/*# sourceMappingURL=recuperarUsuario.css.map */
+/*# sourceMappingURL=verificarCuenta.css.map */

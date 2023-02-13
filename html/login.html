@@ -14,7 +14,7 @@
             <div class="card">
                 <div class="card-body">
                     <div class="logo">
-                        <a href=""><img src = "../imagenes/Logo.png" alt="Logo"></a>
+                        <a href="verificacion.html"><img src = "../imagenes/Logo.png" alt="Logo"></a>
                         <h1 class="encabezado">Iniciar sesión</h1>
                     </div>
 
@@ -30,14 +30,14 @@
                         </div>
                             
                         <div class="errores">
-                            <ex:erroresLogin error="<%=errorLogin%>" tipo="login"/>
-				            <ex:erroresLogin error="<%=errorVerificacion%>" tipo="verificacion"/>
-				             <ex:erroresRegistro error="<%=errorCampoVacio%>" tipo="errorCampoVacio"/>
+                            <ex:Usuario error="<%=errorLogin%>" tipo="errorLogin"/>
+				            <ex:Usuario error="<%=noVerificada%>" tipo="noVerificada"/>
+				            <ex:Formato error="<%=campoVacio%>" tipo="campoVacio"/>
                         </div>
                             
                         <div class="enlaces">
-                            <a href="recuperarUsuario.html">Olvidaste usuario</a>
-                            <a href="cambiarPassword">Olvidaste contraseña</a>                                
+                            <a href="usuarioOlvidado.html">Olvidaste usuario</a>
+                            <a href="passwordOlvidado.html">Olvidaste contraseña</a>                                                             
                         </div>
                                 
                         <div class="boton">
@@ -47,7 +47,8 @@
                                        
                     <form class="formulario" action="registro" method="get">
                         <div class="boton">
-                            <button class="btn btn-primary btn-lg btn-block" type="submit">Registrarse</button>
+                            <button class="btn btn-primary btn-lg btn-block" type="submit">
+                                <a href="registro.html">Registrarse</a> </button>
                         </div>    
                     </form>
 

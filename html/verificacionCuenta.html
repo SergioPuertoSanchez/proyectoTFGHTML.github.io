@@ -3,48 +3,56 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="icon" type="../image/png" href="../imagenes/Logo-sin-fondo.png">
+        <title>Verificar cuenta</title>
+		<link rel="icon" type="image/png" href="imagenes/Logo-sin-fondo.png">
         <link href="https://fonts.googleapis.com/css2?family=Kolker+Brush&family=Lato:wght@400;700&family=Poppins:wght@100;400;700;900&family=Reggae+One&family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">       
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> 
-        <link href="../css/verificarCuenta.css" rel="stylesheet" type="text/css">
-		<title>Verificar cuenta</title>
+        <link rel="stylesheet" href="../css/verificarCuenta.css"  type="text/css">		
+        <link rel="stylesheet" href="../iconos/css/font-awesome.css"> 
+        <script src="../scripts/formularios.js"></script>  
 	</head>	
 	<body>
 		<section class="container">
             <div class="card">
                 <div class="card-body">
                     <div class="logo">
-                        <a href=""><img src = "../imagenes/Logo.png" alt="Logo"></a>
+                        <a href="inicio"><img src = "../imagenes/Logo.png" alt="Logo"></a>
                         <h1 class="encabezado">Verificiar cuenta</h1>
                         <p>Inserte su usuario y el código de verificación enviado al correo</p>
                     </div>
                 
                     <form class="formulario" action="verificarCuenta" method="post">
                         <div class="form-group">
-                            <label class="form-label" for="id_nickname">Email</label>
-                            <input type="text" name="nickname" class="form-control" id="id_nickname"/>                               
+                            <label class="form-label" for="id_nickname">Usuario</label>
+                            <div class="form-nick">                               
+                                <input type="text" name="nickname" value="" class="form-control" id="id_nick"/>                                      
+                            </div>                                                  
                         </div>
 						
 						<div class="form-group">
-                            <label class="form-label" for="id_codigo">Código</label>
-                            <input type="password" name="codigo" class="form-control" id="id_codigo"/>                               
+                            <label class="form-label" for="id_password">Código</label>
+                            <div class="form-pass">                              
+                                 <input type="password" name="codigo" value="" class="form-control" id="id_password"/>                                   
+                                <span onclick="passVisible()">
+                                    <i id="togglePassword" class="fa fa-eye"></i>
+                                </span>
+                            </div>							                                                        
                         </div>
 
-                        <div class="errores">
-                            <ex:Usuario error="<%=errorVerificacion%>" tipo="errorVerificacion"/>
-							<ex:Usuario error="<%=verificada%>" tipo="verificada"/>	
-							<ex:Formato error="<%=campoVacio%>" tipo="campoVacio"/>
+                        <div class="form-errores">                                                  
                         </div>
                                 
-                        <div class="boton">
-                            <button class="btn btn-primary btn-lg btn-block" type="submit">Verificar</button>
+                        <div class="form-boton">
+                            <button class="btn btn-primary btn-lg btn-block" type="submit">
+                                <a href="login.html">Verificar</a>
+                            </button>
                         </div>
                     </form>
 
                     <div class="redes">
-                        <a href="https://www.instagram.com/"><img src="../imagenes/32px-ig.png" alt="Instagram"></a>
-                        <a href="https://www.facebook.com/"><img src="../imagenes/32px-fb.png" alt="Facebook"></a>
-                        <a href="https://twitter.com/"><img src="../imagenes/32px-tw.png" alt="Twitter"></a>
+                        <a href="https://www.instagram.com/"><i class="fa fa-instagram fa-2x"></i></a>
+                        <a href="https://www.facebook.com/"><i class="fa fa-facebook-square fa-2x"></i></a>
+                        <a href="https://twitter.com/"><i class="fa fa-twitter fa-2x"></i></a>
                     </div>
                 </div>    
             </div>      

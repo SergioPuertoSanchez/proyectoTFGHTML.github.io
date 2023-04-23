@@ -2,69 +2,79 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Iniciar sesión</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>Iniciar sesión</title>      
         <link rel="icon" type="image/png" href="../imagenes/Logo-sin-fondo.png">
         <link href="https://fonts.googleapis.com/css2?family=Kolker+Brush&family=Lato:wght@400;700&family=Poppins:wght@100;400;700;900&family=Reggae+One&family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">       
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> 
-        <link href="../css/login.css" rel="stylesheet" type="text/css">  
+        <link rel="stylesheet" href="../css/login.css" type="text/css">
+        <link rel="stylesheet" href="../iconos/css/font-awesome.css"> 
+        <script src="../scripts/formularios.js"></script>          
     </head>
     <body>
         <section class="container">
             <div class="card">
                 <div class="card-body">
                     <div class="logo">
-                        <a href="verificacion.html"><img src = "../imagenes/Logo.png" alt="Logo"></a>
-                        <h1 class="encabezado">Iniciar sesión</h1>
+                        <a href="inicio.html"><img src="../imagenes/Logo.png" alt="Logo"></a>
+                        <h1>Iniciar sesión</h1>
                     </div>
 
                     <form class="formulario" action="login" method="post">
                         <div class="form-group">
                             <label class="form-label" for="id_nick">Nombre de usuario</label>
-                            <input type="text" name="nickname" class="form-control" id="id_nick"/>                               
+                            <div class="form-nick">                                
+                                <input type="text" name="nickname" value="" class="form-control" id="id_nick"/>                                    
+                            </div>                                                          
                         </div>
                   
                         <div class="form-group">
                             <label class="form-label" for="id_password">Contraseña</label>
-                            <input type="password" name="password" class="form-control" id="id_password"/>                                
+                            <div class="form-pass">                               
+                                <input type="password" name="password" value="" class="form-control" id="id_password"/>                                
+                                <span onclick="passVisible()">
+                                    <i id="togglePassword" class="fa fa-eye"></i>
+                                </span>
+                            </div>                                                                                     
                         </div>
                             
-                        <div class="errores">
-                            <ex:Usuario error="<%=errorLogin%>" tipo="errorLogin"/>
-				            <ex:Usuario error="<%=noVerificada%>" tipo="noVerificada"/>
-				            <ex:Formato error="<%=campoVacio%>" tipo="campoVacio"/>
+                        <div class="form-errores">   
+                            Cuenta no verificada pulse en 
+                            <a href="verificacion.html">Verificar</a>                  	
                         </div>
                             
-                        <div class="enlaces">
+                        <div class="form-enlaces">
                             <a href="usuarioOlvidado.html">Olvidaste usuario</a>
-                            <a href="passwordOlvidado.html">Olvidaste contraseña</a>                                                             
+                            <a href="passwordOlvidado.html">Olvidaste contraseña</a>                                
                         </div>
                                 
-                        <div class="boton">
-                            <button class="btn btn-primary btn-lg btn-block" type="submit">Iniciar</button>
+                        <div class="form-boton">
+                            <button class="btn btn-primary btn-lg btn-block" type="submit">
+                                <a href="inicio.html">Iniciar</a>
+                            </button>
                         </div>                                                     
                     </form>
                                        
                     <form class="formulario" action="registro" method="get">
-                        <div class="boton">
+                        <div class="form-boton">
                             <button class="btn btn-primary btn-lg btn-block" type="submit">
-                                <a href="registro.html">Registrarse</a> </button>
+                                <a href="registro.html">Registrarse</a>
+                            </button>
                         </div>    
                     </form>
 
                     <div class="redes">
-                        <a href="https://www.instagram.com/"><img src="../imagenes/32px-ig.png" alt="Instagram"></a>
-                        <a href="https://www.facebook.com/"><img src="../imagenes/32px-fb.png" alt="Facebook"></a>
-                        <a href="https://twitter.com/"><img src="../imagenes/32px-tw.png" alt="Twitter"></a>
+                        <a href="https://www.instagram.com/"><i class="fa fa-instagram fa-2x"></i></a>
+                        <a href="https://www.facebook.com/"><i class="fa fa-facebook-square fa-2x"></i></a>
+                        <a href="https://twitter.com/"><i class="fa fa-twitter fa-2x"></i></a>
                     </div>
 
                     <div class="politicas">
-                        <p>Al iniciar sesión en JiyuDraw, confirmo que he leído y acepto los Términos de servicio de JiyuDraw, 
-                            la Política de privacidad y recibir correos electrónicos y actualizaciones.
-                        </p>
+                        <p>Al iniciar sesión en JiyuDraw, confirmo que he leído y acepto los <a href="">Términos de servicio</a> de JiyuDraw, 
+                        la <a href="">Política de privacidad</a> y recibir correos electrónicos y actualizaciones.</p>
                     </div>
                 </div>
             </div>              
-        </section>       
+        </section>           
     </body>
 </html>

@@ -1,277 +1,213 @@
 @import "v-globales";
 @import "v-formularios";
 
-/*Variables*/
-$h1:2.5em;
-$h1-2:1.9em;
-
-$enlace:1em;
-$enlace-2:.8em;
-
-$img-logo-2:100px;
-
 body{
-    background-image: url(../imagenes/fondo.jpg);
-    background-size: cover;
-    font-family: $roboto;    
+    @include body;    
 }
 
 .container{       
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    padding: 5% 0 5% 0;  
-}
+    @include container;
 
-.card{       
-    width: 45%;   
-}
+    .card{       
+        width: 45%;   
 
-.card-body{  
-    display: flex;
-    flex-direction: column;
-}
+        .card-body{  
+            display: flex;
+            flex-direction: column;
 
-.logo{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center; 
-    margin-bottom: 15px;
+            .logo{
+                @include logo;              
 
-    a{
-        img{
-            width: $img-logo;
+                a{
+                    img{
+                        width: $img-logo;
+                    } 
+                                       
+                    @include efecto-elemento;
+                }
+                           
+                h1{
+                    @include encabezado;
+                }
+            }
+
+            .formulario{
+                align-self: center;   
+                width: 80%;
+                margin-bottom: 30px;
+
+                .form-group{ 
+                    @include form;
+                                       
+                    .form-pass{                        
+                        @include form-pass;                      
+                    }
+                }
+
+                .form-errores{                    
+                    @include errores;
+                    margin-bottom: 8px;
+                    
+                    a{    
+                        @include enlaces;                                                
+                    }
+                }
+                
+                .form-enlaces{
+                    display: flex; 
+                    justify-content: space-evenly;  
+                    flex-wrap: wrap;
+                    margin-bottom: 15px;
+                
+                    a{       
+                        @include enlaces;                       
+                    }
+                }
+
+                .form-boton {                   
+                    @include boton;                    
+                }
+            }   
+
+           .redes{
+                @include redes;
+            }
+
+            .politicas{
+                text-align: center;
+                font-size: $politicas;
+
+                a{   
+                   @include enlaces; 
+                }
+            }
         }
-    }
-
-    a:hover{
-        opacity: 0.5;
-        -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity = 70);
-        filter: alpha(opacity = 70);
-        transition-duration: 0.2s;
-        -moz-transition-duration: 0.2s;
-        -webkit-transition-duration: 0.2s;
-        -o-transition-duration: 0.2s;
-    }
-
-    h1{
-        font-size: $h1;
-        font-weight: bold;
-    }
+    }  
 }
 
-.formulario{
-    align-self: center;   
-    width: 80%;
-    margin-bottom: 30px;
-}
-
-.form-group{  
-    label{
-        font-size: $label;
-        font-weight: bold;
-    }
-
-    .form-control:hover{
-        border: solid 1px $color-principal;
-	    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity = 70);
-	    filter: alpha(opacity = 70);
-	    transition-duration: 0.2s;
-        -moz-transition-duration: 0.2s;
-        -webkit-transition-duration: 0.2s;
-        -o-transition-duration: 0.2s;
-    }
-}
-
-.errores{
-    font-size: $errores;
-    color: $color-error;
-    margin-bottom: 8px;
-}
-
-.enlaces{
-    display: flex; 
-    justify-content: space-evenly;  
-    flex-wrap: wrap;
-    margin-bottom: 15px;
-
-    a{       
-        font-size: $enlace;
-        text-decoration: none;
-    }
-}
-
-.boton{  
-    button{
-        font-size: $boton; 
-        font-weight: bold;
-        background-color: $color-principal;           
-    }
-}
-
-.redes{
-    display: flex;   
-    justify-content: space-evenly;   
-    margin-bottom: 25px;
-
-    a:hover{
-        opacity: 0.5;
-	    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity = 70);
-	    filter: alpha(opacity = 70);
-	    transition-duration: 0.2s;
-        -moz-transition-duration: 0.2s;
-        -webkit-transition-duration: 0.2s;
-        -o-transition-duration: 0.2s;
-    }
-}
-
-.politicas{
-    text-align: center;
-    font-size: $politicas;
-}
-
-@media (max-width: 1199px) {
-    .card{
+@media (max-width: 1024px) {
+    .container .card{
         width: 60%;
     }
 }
 
-@media (max-width: 991px) {
-    .card{
+@media (max-width: 968px) {
+    .container .card{
         width: 80%;
     }
 }
 
 @media (max-width: 768px) {   
-    .card{
-        width: 100%;
+    .container .card{
+        width: 90%;
     }
 }
 
-@media (max-width: 575px) {
+@media (max-width: 480px) {
     body{
-       background: $color-blanco;  
-    }
-
-    .logo{
-        margin-bottom: 40px;
-    }
-
-    .card{
-        border: none;
-    }
-
-    .card-body{       
-        padding: 0;
-    }
-
-    .politicas{
-        padding: 8px 50px;
-    }
-}
-
-@media (max-width: 500px) {
-    .enlaces{
-        display: flex; 
-        flex-direction: column;
-        align-items: center;  
-        
-        a{
-            padding: 5px 0px;
-        }
-    }
-}
-
-@media (min-width: 242px) and (min-height: 793px){   
-    body{
-        height: 100vh;
-        margin: 0;
-        padding: 0;
-    }
-}
-
-@media (max-width: 300px) {   
-    .logo{
-        h1{
-            text-align: center;
-            font-size: $h1-2;
-            margin-bottom: 0px;
-        }
-
-        a{
-            img{
-                width: $img-logo-2;
-            }
-        }
-    }
-
-    .form-group{  
-        label{
-            font-size: $label-2;
-        }
+        background: $color-blanco;       
     }
     
-    .boton{  
-        button{
+    .container .card{
+        border: none;
+
+        .card-body{       
+            padding: 0;
+
+            .logo{
+                margin-bottom: 25px;
+                
+                h1{
+                    text-align: center;
+                    font-size: $h1-2;
+                    margin-bottom: 0px;
+                }
+
+                a img{
+                    width: $img-logo-2;                        
+                }
+            }
+
+            .formulario .form-enlaces{
+                display: flex; 
+                flex-direction: column;
+                align-items: center;  
+                
+                a{
+                    padding: 5px 0px;
+                }
+            }
+
+            .politicas{
+                padding: 8px 50px;
+            }
             
-            font-size: $boton-2;            
         }
-    }
-
-    .enlaces{
-        a{
-            font-size: $enlace-2;
-        }
-    }
-
-    .politicas{
-        margin-top: 10px;
-        font-size: $politicas;
-    }
-
-    .redes{
-        margin-top: 15px;
-        
-        a{
-            img{
-                width: $img-redes;
-            }
-        }
-    }
+    } 
 }
 
-@media (max-width: 950px) and (max-height: 420px){    
-    .card{
-        border: none;
-    }
-    
+@media (max-width: 320px) {   
     body{
         background: $color-blanco;       
     }
 
-    .container{    
+    .container .card .card-body{           
+        .formulario{
+            .form-group label{                          
+                 font-size: $label-2;               
+            }
+                    
+            .form-boton button{                                     
+                font-size: $boton;            
+            }
+                
+            .form-enlaces a{              
+                font-size: $enlace;
+            }
+        }
+
+        .politicas{
+            margin-top: 10px;
+            font-size: $politicas;
+        }
+            
+        .redes{
+            margin-top: 15px;                    
+        }
+    }         
+}
+
+@media (max-width: 950px) and (max-height: 420px){      
+    body{
+        background: $color-blanco;       
+    }
+    
+    .container{
         min-width: 100%;
-    }
 
-    .card{
-        padding: 0;
-        border: none;
-        min-width: 100%;
-    }
+        .card{   
+            padding: 0;
+            border: none;
+            min-width: 100%;     
 
-    .boton{
-        margin-top: 15px;
-    }
+            .card-body{
+                .formulario .form-enlaces{                   
+                    margin-top: 20px;
+                    margin-bottom: 20px;
+                    
+                }
 
-    .enlaces{
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
+                .politicas{
+                    padding: 0px 100px;
+                }
+            }
+        }           
+    } 
+}
 
-    .politicas{
-        padding: 0px 100px;
+//240 y 793
+@media (min-width: 230px) and (min-height: 740px){   
+    body{
+        @include body-vh;
     }
 }

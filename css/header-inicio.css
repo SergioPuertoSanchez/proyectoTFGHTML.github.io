@@ -1,0 +1,171 @@
+/*Letras*/
+/*Colores*/
+/*Mixin*/
+.cabecera {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: #E0E8F1;
+}
+.cabecera .logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.cabecera .logo a:hover {
+  opacity: 0.6;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity = 70);
+  filter: alpha(opacity=70);
+  transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+}
+.cabecera .logo a:active {
+  opacity: 1;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity = 70);
+  filter: alpha(opacity=70);
+  transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+}
+.cabecera .logo a img {
+  width: 120px;
+  margin-right: 20px;
+}
+.cabecera .logo h1 {
+  font-family: "Kolker Brush";
+  font-size: 4em;
+}
+.cabecera .buscador {
+  width: 50%;
+  height: 50px;
+  margin-left: 30px;
+}
+.cabecera .buscador input {
+  height: 50px;
+}
+.cabecera .buscador input:hover {
+  border: solid 1px #094592;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity = 70);
+  filter: alpha(opacity=70);
+  transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+}
+.cabecera .buscador button {
+  border: none;
+  height: 50px;
+}
+.cabecera .buscador button:hover {
+  opacity: 0.6;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity = 70);
+  filter: alpha(opacity=70);
+  transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+}
+.cabecera .buscador button:active {
+  opacity: 1;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity = 70);
+  filter: alpha(opacity=70);
+  transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+}
+.cabecera .navbar .navbar-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.cabecera .navbar .nav-item {
+  margin-right: 15px;
+}
+.cabecera .navbar .nav-item a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+.cabecera .navbar .nav-item a img {
+  margin-right: 15px;
+  width: 30px;
+}
+
+@media (max-width: 1328px) {
+  .cabecera .buscador {
+    width: 40%;
+  }
+}
+@media (max-width: 960px) {
+  .cabecera .logo {
+    margin-right: 45px;
+  }
+  .cabecera .buscador {
+    width: 90%;
+    order: 3;
+    margin-left: 8px;
+  }
+}
+@media (max-width: 768px) {
+  .cabecera .logo {
+    margin-right: 0px;
+  }
+  .cabecera .logo a img {
+    width: 90px;
+    margin-right: 10px;
+  }
+  .cabecera .logo h1 {
+    font-family: "Kolker Brush";
+    font-size: 3.5;
+  }
+  .cabecera .buscador {
+    width: 90%;
+    order: 3;
+    margin-left: 8px;
+  }
+  .cabecera .buscador input {
+    height: 45px;
+  }
+  .cabecera .navbar .nav-item {
+    margin-right: 10px;
+  }
+  .cabecera .navbar .nav-item a {
+    font-size: 0.9em;
+  }
+  .cabecera .navbar .nav-item a img {
+    margin-right: 12px;
+    width: 30px;
+  }
+}
+@media (max-width: 480px) {
+  .cabecera .logo {
+    margin-right: 40px;
+    width: 100%;
+  }
+  .cabecera .buscador {
+    margin-left: 30px;
+  }
+  .cabecera .navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+}
+
+/*# sourceMappingURL=header-inicio.css.map */

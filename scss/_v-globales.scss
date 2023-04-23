@@ -1,11 +1,57 @@
 /*Letras*/
-$lato:'Lato';
 $roboto:'Roboto';
 $kolker: 'Kolker Brush';
+$lato:'Lato';
 $reggae: 'Reggae One';
 $poppins: 'Poppins';
 
 /*Colores*/
 $color-principal:#094592;
-$color-error:red;
+$color-secundario:#285CA0;
+$color-fondo: #E0E8F1; 
+$color-error:#F22233;
 $color-blanco:#ffffff;
+$color-negro:#010912;
+
+
+/*Mixin*/
+@mixin efecto-elemento{
+    &:hover{
+        opacity: 0.6;
+        -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity = 70);
+        filter: alpha(opacity = 70);
+        transition-duration: 0.2s;
+        -moz-transition-duration: 0.2s;
+        -webkit-transition-duration: 0.2s;
+        -o-transition-duration: 0.2s;
+    }
+    &:active{
+        opacity: 1;
+        -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity = 70);
+        filter: alpha(opacity = 70);
+        transition-duration: 0.2s;
+        -moz-transition-duration: 0.2s;
+        -webkit-transition-duration: 0.2s;
+        -o-transition-duration: 0.2s;
+    }
+}
+
+@mixin efecto-input{
+    &:hover{
+        border: solid 1px $color-principal;                           
+        -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity = 70);
+        filter: alpha(opacity = 70);
+        transition-duration: 0.2s;
+        -moz-transition-duration: 0.2s;
+        -webkit-transition-duration: 0.2s;
+        -o-transition-duration: 0.2s;
+    }
+}
+
+@mixin logo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    margin-bottom: 15px;   
+}

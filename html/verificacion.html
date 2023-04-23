@@ -4,45 +4,45 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Enviar código de verificación</title>
-        <link rel="icon" type="../image/png" href="imagenes/Logo-sin-fondo.png">
+        <link rel="icon" type="image/png" href="imagenes/Logo-sin-fondo.png">
         <link href="https://fonts.googleapis.com/css2?family=Kolker+Brush&family=Lato:wght@400;700&family=Poppins:wght@100;400;700;900&family=Reggae+One&family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">       
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> 
-        <link href="../css/verificacion.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="../css/verificacion.css" type="text/css">
+        <link rel="stylesheet" href="../iconos/css/font-awesome.css"> 
+        <script src="../scripts/formularios.js"></script>  
     </head>
     <body>
         <section class="container">
             <div class="card">
                 <div class="card-body">
                     <div class="logo">
-                        <a href=""><img src = "../imagenes/Logo.png" alt="Logo"></a>
-                        <h1 class="encabezado">Verificiación cuenta</h1>
+                        <a href="inicio"><img src = "../imagenes/Logo.png" alt="Logo"></a>
+                        <h1>Verificiación cuenta</h1>
                         <p>Ponga un email registrado y le enviaremos un código de verificación</p>
                     </div>
                 
                     <form class="formulario" action="verificacion" method="post">
                         <div class="form-group">
                             <label class="form-label" for="id_email">Email</label>
-                            <input type="text" name="email" class="form-control" id="id_email"/>                               
+                            <div class="form-email">                              
+                                <input type="text" name="email" value="" class="form-control" id="id_email"/>                                   
+                            </div>                               
                         </div>                       
 
-                        <div class="errores">
-                            <ex:Email error="<%=emailNoExiste%>" tipo="emailnoExiste"/>				            
-                            <ex:Email error="<%=emailNoEnviado%>" tipo="emailNoEnviado"/>
-                            <ex:Email error="<%=errorFormatoEmail%>" tipo="formatoEmail"/>
-                            <ex:Formato error="<%=campoVacio%>" tipo="campoVacio"/>			
-                            <ex:Usuario error="<%=verificada%>" tipo="verificada"/>
+                        <div class="form-errores">                                              
                         </div>
                                 
-                        <div class="boton">
+                        <div class="form-boton">
                             <button class="btn btn-primary btn-lg btn-block" type="submit">
-                                <a href="verificacionCuenta.html">Enviar</a></button>
+                                <a href="verificacionCuenta.html">Enviar</a>
+                            </button>
                         </div>
                     </form>
 
                     <div class="redes">
-                        <a href="https://www.instagram.com/"><img src="../imagenes/32px-ig.png" alt="Instagram"></a>
-                        <a href="https://www.facebook.com/"><img src="../imagenes/32px-fb.png" alt="Facebook"></a>
-                        <a href="https://twitter.com/"><img src="../imagenes/32px-tw.png" alt="Twitter"></a>
+                        <a href="https://www.instagram.com/"><i class="fa fa-instagram fa-2x"></i></a>
+                        <a href="https://www.facebook.com/"><i class="fa fa-facebook-square fa-2x"></i></a>
+                        <a href="https://twitter.com/"><i class="fa fa-twitter fa-2x"></i></a>
                     </div>
                 </div>    
             </div>      

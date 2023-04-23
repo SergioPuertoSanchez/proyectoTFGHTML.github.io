@@ -1,0 +1,170 @@
+@import "v-globales";
+
+$h1:4em;
+$h1-2:3.5;
+$enlace:.9em;
+
+$imagen-logo:120px;
+$imagen-logo-2:90px;
+$imagen-buscador:30px;
+$imagen-buscador-2:25px;
+
+.cabecera{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+	position: sticky;
+    top: 0;
+	z-index: 1;
+    background-color: $color-fondo;
+    
+    .logo{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;        
+    
+        a{
+            @include efecto-elemento;            
+            img{
+                width: $imagen-logo;
+                margin-right: 20px;
+            }
+        }
+        
+        h1{
+            font-family: $kolker;
+            font-size: $h1;
+        }
+    }
+    
+    .buscador{
+        width: 50%;
+        height: 50px;
+        margin-left: 30px;
+         
+        input{
+            @include efecto-input;
+            height: 50px;
+        }   
+    
+        button{
+            @include efecto-elemento;
+            border: none;
+            height: 50px; 
+        }     
+    }
+    
+    .navbar{       
+        .navbar-nav{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .nav-item{
+            margin-right: 15px;
+            
+            a{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                text-decoration: none;
+                
+                img{
+                    margin-right: 15px;
+                    width: $imagen-buscador;
+                }
+            }
+        }
+    }    
+}
+
+@media (max-width: 1328px) {
+    .cabecera .buscador{
+        width: 40%;
+    }
+}
+
+@media (max-width: 960px) {
+    .cabecera{
+        .logo{
+            margin-right: 45px;
+        }
+    
+        .buscador{
+            width: 90%;
+            order: 3;
+            margin-left: 8px;
+        }
+    }   
+}
+
+@media (max-width: 768px) {
+    .cabecera{
+        .logo{
+            margin-right: 0px;
+
+            a img{
+                width: $imagen-logo-2;
+                margin-right: 10px;                
+            }
+
+            h1{
+                font-family: $kolker;
+                font-size: $h1-2;
+            }
+        }
+    
+        .buscador{
+            width: 90%;
+            order: 3;
+            margin-left: 8px;
+
+            input{
+                height: 45px;
+            }   
+        }
+
+        .navbar{                  
+            .nav-item{
+                margin-right: 10px;
+                
+                a{   
+                    font-size: $enlace;    
+
+                    img{
+                        margin-right: 12px;
+                        width: $imagen-buscador;
+                    }
+                }
+            }
+        }
+    }   
+}
+
+@media (max-width: 480px) {
+    .cabecera{
+        .logo{
+            margin-right: 40px;
+            width: 100%;
+        }
+    
+        .buscador{           
+            margin-left: 30px;
+        }
+
+        .navbar{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            margin-bottom: 15px;
+        }
+    } 
+}

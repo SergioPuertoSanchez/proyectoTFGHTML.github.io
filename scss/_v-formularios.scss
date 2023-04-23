@@ -1,15 +1,171 @@
+$h1:2.2em;
+$h1-2:1.8em;
+
+$p:1.2em;
+$p-2:1em;
+
 $img-logo:120px;
-
-$boton:1em;
-$boton-2:.9em;
-
-$politicas:.7em;
-$politicas-2:.5em;
-
+$img-logo-2:100px;
 $img-redes:25px;
 
-$label:1em;
-$label-2:.9em;
+$boton:.8em;
 
-$errores:.9em;
-$errores-2:.7em;
+$politicas:.6em;
+$politicas-2:.4em;
+
+$label:1em;
+$label-2:.8em;
+
+$errores:.8em;
+$errores-2:.6em;
+
+$enlace:.8em;
+
+/*MIXIN*/
+@mixin body{
+    background-image: url(../imagenes/fondo2.jpg);
+    background-size: cover;
+    font-family: $roboto;
+}
+
+@mixin body-vh{
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+@mixin container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 5% 0 5% 0;  
+}
+
+@mixin encabezado{
+    text-align: center;   
+    font-size: $h1;
+    font-weight: bold;  
+}
+
+@mixin encabezado-parrafo{
+    margin-top: 10px;
+    text-align: center;    
+    font-size: $p; 
+}
+
+@mixin form{
+    label{
+        font-size: $label;
+        font-weight: bold;
+    }
+    
+    .form-nick, .form-pass, .form-email, .form-nombre{
+        border: solid 1px gainsboro;
+        border-radius: 4px;
+        
+        input{
+            border: none;
+            border-radius: 4px;                           
+        }
+
+        &:hover{
+            border: solid 1px $color-principal;                           
+            -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity = 70);
+            filter: alpha(opacity = 70);
+            transition-duration: 0.2s;
+            -moz-transition-duration: 0.2s;
+            -webkit-transition-duration: 0.2s;
+            -o-transition-duration: 0.2s;
+        }
+    }
+}
+
+@mixin form-pass{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+                                     
+    span{
+        margin-left: 10px;
+        margin-right: 10px;
+        cursor: pointer;
+                                  
+        &:hover{
+            opacity: 0.5;
+            -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity = 70);
+            filter: alpha(opacity = 70);
+            transition-duration: 0.2s;
+            -moz-transition-duration: 0.2s;
+            -webkit-transition-duration: 0.2s;
+            -o-transition-duration: 0.2s;
+        }                            
+    }
+}
+
+@mixin boton{
+    button{
+        background-color: $color-principal;                
+        font-size: 1em;
+        font-weight: bold; 
+        
+        &:hover{
+            background-color: $color-secundario;
+            -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity = 70);
+            filter: alpha(opacity = 70);
+            transition-duration: 0.2s;
+            -moz-transition-duration: 0.2s;
+            -webkit-transition-duration: 0.2s;
+            -o-transition-duration: 0.2s;
+        }
+        &:active{
+            opacity: 0.9;
+            -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity = 70);
+            filter: alpha(opacity = 70);
+            transition-duration: 0.2s;
+            -moz-transition-duration: 0.2s;
+            -webkit-transition-duration: 0.2s;
+            -o-transition-duration: 0.2s;
+        }
+    }
+}
+
+@mixin errores{
+    font-size: $errores;
+    color: $color-error;
+}
+
+@mixin enlaces{
+    font-size: 1em;                        
+    text-decoration: none; 
+}
+
+@mixin redes{
+    display: flex;   
+    justify-content: space-evenly;
+    margin-bottom: 15px;
+    
+    a{
+        color: $color-negro;
+        
+        &:hover{
+            opacity: 0.5;
+            -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity = 70);
+            filter: alpha(opacity = 70);
+            transition-duration: 0.2s;
+            -moz-transition-duration: 0.2s;
+            -webkit-transition-duration: 0.2s;
+            -o-transition-duration: 0.2s;
+        }
+        &:active{
+            opacity: 1;
+            -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity = 70);
+            filter: alpha(opacity = 70);
+            transition-duration: 0.2s;
+            -moz-transition-duration: 0.2s;
+            -webkit-transition-duration: 0.2s;
+            -o-transition-duration: 0.2s;
+        }                    
+    }    
+}

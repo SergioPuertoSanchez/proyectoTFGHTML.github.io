@@ -1,8 +1,10 @@
 /*Letras*/
 /*Colores*/
+/*Mixin*/
+/*MIXIN*/
 /*Variables*/
 body {
-  background-image: url(../imagenes/fondo.jpg);
+  background-image: url(../imagenes/fondo2.jpg);
   background-size: cover;
   font-family: "Roboto";
 }
@@ -13,14 +15,13 @@ body {
   align-items: center;
   justify-content: center;
   height: 100%;
+  padding: 5% 0 5% 0;
   padding: 25px 0px 25px 0px;
 }
-
-.registro {
+.container .registro {
   width: 80%;
 }
-
-.registro__izq {
+.container .registro .registro__izq {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -28,27 +29,26 @@ body {
   background-image: url(../imagenes/fondo-registro.jpg);
   background-size: cover;
 }
-
-.info {
+.container .registro .registro__izq .registro__izq__info {
   text-align: start;
   color: #ffffff;
 }
-.info h3 {
+.container .registro .registro__izq .registro__izq__info .info_p {
   margin-bottom: 26px;
   font-weight: bold;
   font-size: 2.2em;
 }
-
-.redes__izq {
+.container .registro .registro__izq .registro__izq__redes {
   display: flex;
   justify-content: space-evenly;
+  margin-bottom: 15px;
+  margin-bottom: 0;
   margin-top: 15px;
 }
-.redes__izq a {
-  border-radius: 5px;
-  background-color: #ffffff;
+.container .registro .registro__izq .registro__izq__redes a {
+  color: #010912;
 }
-.redes__izq a:hover {
+.container .registro .registro__izq .registro__izq__redes a:hover {
   opacity: 0.5;
   -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity = 70);
   filter: alpha(opacity=70);
@@ -57,27 +57,37 @@ body {
   -webkit-transition-duration: 0.2s;
   -o-transition-duration: 0.2s;
 }
-
-.registro__drch {
+.container .registro .registro__izq .registro__izq__redes a:active {
+  opacity: 1;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity = 70);
+  filter: alpha(opacity=70);
+  transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+}
+.container .registro .registro__izq .registro__izq__redes a {
+  color: #ffffff;
+}
+.container .registro .registro__drch {
   display: flex;
   flex-direction: column;
   background-color: #ffffff;
 }
-
-.logo {
+.container .registro .registro__drch .registro__drch__logo {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-bottom: 15px;
+  flex-direction: row;
+  margin-bottom: 0;
 }
-.logo a {
+.container .registro .registro__drch .registro__drch__logo a {
   margin-right: 20px;
 }
-.logo a img {
-  width: 120px;
-}
-.logo a:hover {
-  opacity: 0.5;
+.container .registro .registro__drch .registro__drch__logo a:hover {
+  opacity: 0.6;
   -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity = 70);
   filter: alpha(opacity=70);
   transition-duration: 0.2s;
@@ -85,29 +95,47 @@ body {
   -webkit-transition-duration: 0.2s;
   -o-transition-duration: 0.2s;
 }
-.logo h1 {
-  font-family: "Kolker Brush";
-  font-size: 5.5em;
+.container .registro .registro__drch .registro__drch__logo a:active {
+  opacity: 1;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity = 70);
+  filter: alpha(opacity=70);
+  transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
 }
-
-.formulario {
+.container .registro .registro__drch .registro__drch__logo a img {
+  width: 120px;
+}
+.container .registro .registro__drch .registro__drch__logo h1 {
+  text-align: center;
+  font-size: 5.4em;
+  font-weight: bold;
+  font-family: "Kolker Brush";
+  font-weight: normal;
+}
+.container .registro .registro__drch .registro__drch__formulario {
   align-self: center;
   padding: 10px 25px;
 }
-.formulario h4 {
+.container .registro .registro__drch .registro__drch__formulario h2 {
   padding: 0px 0px 5px 5px;
-  font-size: 1.5em;
+  font-size: 1.6em;
   font-weight: bold;
 }
-
-.form-group {
-  padding: 0px 5px 0px 5px;
-}
-.form-group label {
+.container .registro .registro__drch .registro__drch__formulario .form-group label {
   font-size: 1em;
   font-weight: bold;
 }
-.form-group .form-control:hover {
+.container .registro .registro__drch .registro__drch__formulario .form-group .form-nick, .container .registro .registro__drch .registro__drch__formulario .form-group .form-pass, .container .registro .registro__drch .registro__drch__formulario .form-group .form-email, .container .registro .registro__drch .registro__drch__formulario .form-group .form-nombre {
+  border: solid 1px gainsboro;
+  border-radius: 4px;
+}
+.container .registro .registro__drch .registro__drch__formulario .form-group .form-nick input, .container .registro .registro__drch .registro__drch__formulario .form-group .form-pass input, .container .registro .registro__drch .registro__drch__formulario .form-group .form-email input, .container .registro .registro__drch .registro__drch__formulario .form-group .form-nombre input {
+  border: none;
+  border-radius: 4px;
+}
+.container .registro .registro__drch .registro__drch__formulario .form-group .form-nick:hover, .container .registro .registro__drch .registro__drch__formulario .form-group .form-pass:hover, .container .registro .registro__drch .registro__drch__formulario .form-group .form-email:hover, .container .registro .registro__drch .registro__drch__formulario .form-group .form-nombre:hover {
   border: solid 1px #094592;
   -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity = 70);
   filter: alpha(opacity=70);
@@ -116,71 +144,128 @@ body {
   -webkit-transition-duration: 0.2s;
   -o-transition-duration: 0.2s;
 }
-
-.error {
-  font-size: 0.9em;
-  color: red;
+.container .registro .registro__drch .registro__drch__formulario .form-group .form-pass {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
-
-.errores {
-  padding: 0px 5px 0px 5px;
-  font-size: 0.9em;
-  color: red;
+.container .registro .registro__drch .registro__drch__formulario .form-group .form-pass span {
+  margin-left: 10px;
+  margin-right: 10px;
+  cursor: pointer;
 }
-
-.boton {
-  padding: 0px 5px 0px 5px;
+.container .registro .registro__drch .registro__drch__formulario .form-group .form-pass span:hover {
+  opacity: 0.5;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity = 70);
+  filter: alpha(opacity=70);
+  transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
 }
-.boton button {
+.container .registro .registro__drch .registro__drch__formulario .form-errores {
+  font-size: 0.8em;
+  color: #F22233;
+}
+.container .registro .registro__drch .registro__drch__formulario .form-boton button {
   background-color: #094592;
-  margin-top: 16px;
-  margin-bottom: 24px;
   font-size: 1em;
   font-weight: bold;
 }
-
-.login {
+.container .registro .registro__drch .registro__drch__formulario .form-boton button:hover {
+  background-color: #285CA0;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity = 70);
+  filter: alpha(opacity=70);
+  transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+}
+.container .registro .registro__drch .registro__drch__formulario .form-boton button:active {
+  opacity: 0.9;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity = 70);
+  filter: alpha(opacity=70);
+  transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+}
+.container .registro .registro__drch .registro__drch__formulario .form-boton button {
+  margin-top: 16px;
+  margin-bottom: 22px;
+}
+.container .registro .registro__drch .registro__drch__login {
   display: flex;
   flex-direction: row;
+  align-self: center;
   padding: 0px 5px 0px 5px;
 }
-.login a {
+.container .registro .registro__drch .registro__drch__login a {
+  font-size: 1em;
+  text-decoration: none;
   padding-left: 5px;
+}
+.container .registro .registro__drch .registro__drch__redes {
+  display: none;
+}
+.container .registro .registro__drch .registro__drch__politicas {
+  margin-top: 10px;
+  padding: 0px 5px 0px 5px;
+  text-align: center;
+  font-size: 0.6em;
+}
+.container .registro .registro__drch .registro__drch__politicas a {
+  font-size: 1em;
   text-decoration: none;
 }
 
-.redes__drch {
-  display: none;
-}
-
-.politicas {
-  text-align: center;
-  margin-top: 20px;
-  padding: 0px 5px 0px 5px;
-  font-size: 0.7em;
-}
-
-@media (max-width: 1200px) {
-  .registro {
+@media (max-width: 1328px) {
+  .container .registro {
     width: 100%;
   }
 }
-@media (max-width: 991px) {
-  .registro__izq {
+@media (max-width: 1024px) {
+  .container .registro {
+    width: 80%;
+  }
+  .container .registro .registro__izq {
     display: none;
   }
-  .registro__drch {
+  .container .registro .registro__drch {
     min-width: 100%;
   }
-  .redes__drch {
+  .container .registro .registro__drch .registro__drch__logo h1 {
+    font-size: 3.8em;
+  }
+  .container .registro .registro__drch .registro__drch__logo a img {
+    width: 100px;
+  }
+  .container .registro .registro__drch .registro__drch__formulario h2 {
+    font-size: 1.2em;
+  }
+  .container .registro .registro__drch .registro__drch__formulario .form-group label {
+    font-size: 1em;
+  }
+  .container .registro .registro__drch .registro__drch__formulario .form-errores {
+    font-size: 0.6em;
+  }
+  .container .registro .registro__drch .registro__drch__formulario .form-boton button {
+    font-size: 0.8em;
+    margin-bottom: 10px;
+  }
+  .container .registro .registro__drch .registro__drch__politicas {
+    margin-top: 5px;
+    font-size: 0.6em;
+  }
+  .container .registro .registro__drch .registro__drch__redes {
     display: flex;
     justify-content: space-evenly;
+    margin-bottom: 15px;
   }
-  .redes__drch a {
-    border-radius: 5px;
-    background-color: #ffffff;
+  .container .registro .registro__drch .registro__drch__redes a {
+    color: #010912;
   }
-  .redes__drch a:hover {
+  .container .registro .registro__drch .registro__drch__redes a:hover {
     opacity: 0.5;
     -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity = 70);
     filter: alpha(opacity=70);
@@ -189,83 +274,64 @@ body {
     -webkit-transition-duration: 0.2s;
     -o-transition-duration: 0.2s;
   }
-  .formulario h4 {
-    font-size: 1.3em;
+  .container .registro .registro__drch .registro__drch__redes a:active {
+    opacity: 1;
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity = 70);
+    filter: alpha(opacity=70);
+    transition-duration: 0.2s;
+    -moz-transition-duration: 0.2s;
+    -webkit-transition-duration: 0.2s;
+    -o-transition-duration: 0.2s;
   }
-  .logo h1 {
-    font-size: 3.8em;
-  }
-  .logo a img {
-    width: 70px;
-  }
-  .form-group label {
-    font-size: 1em;
-  }
-  .boton button {
-    font-size: 0.9em;
-  }
-  .login {
-    font-size: 0.8em;
-  }
-  .error {
-    font-size: 0.7em;
-  }
-  .errores {
-    font-size: 0.7em;
-  }
-  .politicas {
-    margin-top: 5px;
-    font-size: 0.7em;
-  }
-  .redes__drch {
-    margin-bottom: 15px;
-  }
-  .redes__drch a img {
-    width: 25px;
+}
+@media (max-width: 768px) {
+  .container .registro {
+    width: 100%;
   }
 }
 @media (max-width: 575px) {
   body {
     background: #ffffff;
   }
-  .logo h1 {
+  .container .registro .registro__drch .registro__drch__logo h1 {
     font-size: 3.8em;
   }
-  .logo a img {
-    width: 90px;
+  .container .registro .registro__drch .registro__drch__logo a img {
+    width: 100px;
   }
-  .form-group label {
-    font-size: 0.9em;
+  .container .registro .registro__drch .registro__drch__formulario .form-group label {
+    font-size: 0.8em;
   }
 }
-@media (max-width: 310px) {
-  .logo h1 {
+@media (max-width: 320px) {
+  .container .registro .registro__drch .registro__drch__logo h1 {
     display: none;
   }
-  .formulario {
+  .container .registro .registro__drch .registro__drch__formulario {
     padding: 0px 0px;
   }
-  .politicas {
+  .container .registro .registro__drch .registro__drch__login {
     margin-top: 10px;
+    font-size: 0.8em;
   }
 }
 @media (max-width: 245px) {
-  .login {
+  .container .registro .registro__drch .registro__drch__login {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 0;
   }
-  .login a {
+  .container .registro .registro__drch .registro__drch__login a {
     padding-left: 0px;
     text-decoration: none;
   }
-  .redes__drch {
-    margin-top: 20px;
+  .container .registro .registro__drch .registro__drch__redes {
+    margin-top: 30px;
   }
 }
 @media (max-width: 575px) and (max-height: 792px) {
-  .logo {
+  .container .registro .registro__drch .registro__drch__logo {
     display: flex;
     flex-direction: column;
     margin-bottom: 10px;
@@ -278,17 +344,17 @@ body {
   .container {
     min-width: 100%;
   }
-  .registro {
+  .container .registro {
     min-width: 10%;
   }
-  .registro__izq {
+  .container .registro .registro__izq {
     display: none;
   }
-  .registro__drch {
+  .container .registro .registro__drch {
     min-width: 100%;
   }
 }
-@media (min-width: 245px) and (min-height: 793px) {
+@media (min-width: 245px) and (min-height: 800px) {
   body {
     height: 100vh;
     margin: 0;

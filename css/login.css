@@ -1,8 +1,9 @@
 /*Letras*/
 /*Colores*/
-/*Variables*/
+/*Mixin*/
+/*MIXIN*/
 body {
-  background-image: url(../imagenes/fondo.jpg);
+  background-image: url(../imagenes/fondo2.jpg);
   background-size: cover;
   font-family: "Roboto";
 }
@@ -15,28 +16,25 @@ body {
   height: 100%;
   padding: 5% 0 5% 0;
 }
-
-.card {
+.container .card {
   width: 45%;
 }
-
-.card-body {
+.container .card .card-body {
   display: flex;
   flex-direction: column;
 }
-
-.logo {
+.container .card .card-body .logo {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   margin-bottom: 15px;
 }
-.logo a img {
+.container .card .card-body .logo a img {
   width: 120px;
 }
-.logo a:hover {
-  opacity: 0.5;
+.container .card .card-body .logo a:hover {
+  opacity: 0.6;
   -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity = 70);
   filter: alpha(opacity=70);
   transition-duration: 0.2s;
@@ -44,22 +42,38 @@ body {
   -webkit-transition-duration: 0.2s;
   -o-transition-duration: 0.2s;
 }
-.logo h1 {
-  font-size: 2.5em;
+.container .card .card-body .logo a:active {
+  opacity: 1;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity = 70);
+  filter: alpha(opacity=70);
+  transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+}
+.container .card .card-body .logo h1 {
+  text-align: center;
+  font-size: 2.2em;
   font-weight: bold;
 }
-
-.formulario {
+.container .card .card-body .formulario {
   align-self: center;
   width: 80%;
   margin-bottom: 30px;
 }
-
-.form-group label {
+.container .card .card-body .formulario .form-group label {
   font-size: 1em;
   font-weight: bold;
 }
-.form-group .form-control:hover {
+.container .card .card-body .formulario .form-group .form-nick, .container .card .card-body .formulario .form-group .form-pass, .container .card .card-body .formulario .form-group .form-email, .container .card .card-body .formulario .form-group .form-nombre {
+  border: solid 1px gainsboro;
+  border-radius: 4px;
+}
+.container .card .card-body .formulario .form-group .form-nick input, .container .card .card-body .formulario .form-group .form-pass input, .container .card .card-body .formulario .form-group .form-email input, .container .card .card-body .formulario .form-group .form-nombre input {
+  border: none;
+  border-radius: 4px;
+}
+.container .card .card-body .formulario .form-group .form-nick:hover, .container .card .card-body .formulario .form-group .form-pass:hover, .container .card .card-body .formulario .form-group .form-email:hover, .container .card .card-body .formulario .form-group .form-nombre:hover {
   border: solid 1px #094592;
   -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity = 70);
   filter: alpha(opacity=70);
@@ -68,36 +82,17 @@ body {
   -webkit-transition-duration: 0.2s;
   -o-transition-duration: 0.2s;
 }
-
-.errores {
-  font-size: 0.9em;
-  color: red;
-  margin-bottom: 8px;
-}
-
-.enlaces {
+.container .card .card-body .formulario .form-group .form-pass {
   display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  margin-bottom: 15px;
+  flex-direction: row;
+  align-items: center;
 }
-.enlaces a {
-  font-size: 1em;
-  text-decoration: none;
+.container .card .card-body .formulario .form-group .form-pass span {
+  margin-left: 10px;
+  margin-right: 10px;
+  cursor: pointer;
 }
-
-.boton button {
-  font-size: 1em;
-  font-weight: bold;
-  background-color: #094592;
-}
-
-.redes {
-  display: flex;
-  justify-content: space-evenly;
-  margin-bottom: 25px;
-}
-.redes a:hover {
+.container .card .card-body .formulario .form-group .form-pass span:hover {
   opacity: 0.5;
   -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity = 70);
   filter: alpha(opacity=70);
@@ -106,114 +101,177 @@ body {
   -webkit-transition-duration: 0.2s;
   -o-transition-duration: 0.2s;
 }
-
-.politicas {
+.container .card .card-body .formulario .form-errores {
+  font-size: 0.8em;
+  color: #F22233;
+  margin-bottom: 8px;
+}
+.container .card .card-body .formulario .form-errores a {
+  font-size: 1em;
+  text-decoration: none;
+}
+.container .card .card-body .formulario .form-enlaces {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+.container .card .card-body .formulario .form-enlaces a {
+  font-size: 1em;
+  text-decoration: none;
+}
+.container .card .card-body .formulario .form-boton button {
+  background-color: #094592;
+  font-size: 1em;
+  font-weight: bold;
+}
+.container .card .card-body .formulario .form-boton button:hover {
+  background-color: #285CA0;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity = 70);
+  filter: alpha(opacity=70);
+  transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+}
+.container .card .card-body .formulario .form-boton button:active {
+  opacity: 0.9;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity = 70);
+  filter: alpha(opacity=70);
+  transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+}
+.container .card .card-body .redes {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 15px;
+}
+.container .card .card-body .redes a {
+  color: #010912;
+}
+.container .card .card-body .redes a:hover {
+  opacity: 0.5;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity = 70);
+  filter: alpha(opacity=70);
+  transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+}
+.container .card .card-body .redes a:active {
+  opacity: 1;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity = 70);
+  filter: alpha(opacity=70);
+  transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+}
+.container .card .card-body .politicas {
   text-align: center;
-  font-size: 0.7em;
+  font-size: 0.6em;
+}
+.container .card .card-body .politicas a {
+  font-size: 1em;
+  text-decoration: none;
 }
 
-@media (max-width: 1199px) {
-  .card {
+@media (max-width: 1024px) {
+  .container .card {
     width: 60%;
   }
 }
-@media (max-width: 991px) {
-  .card {
+@media (max-width: 968px) {
+  .container .card {
     width: 80%;
   }
 }
 @media (max-width: 768px) {
-  .card {
-    width: 100%;
+  .container .card {
+    width: 90%;
   }
 }
-@media (max-width: 575px) {
+@media (max-width: 480px) {
   body {
     background: #ffffff;
   }
-  .logo {
-    margin-bottom: 40px;
-  }
-  .card {
+  .container .card {
     border: none;
   }
-  .card-body {
+  .container .card .card-body {
     padding: 0;
   }
-  .politicas {
-    padding: 8px 50px;
+  .container .card .card-body .logo {
+    margin-bottom: 25px;
   }
-}
-@media (max-width: 500px) {
-  .enlaces {
+  .container .card .card-body .logo h1 {
+    text-align: center;
+    font-size: 1.8em;
+    margin-bottom: 0px;
+  }
+  .container .card .card-body .logo a img {
+    width: 100px;
+  }
+  .container .card .card-body .formulario .form-enlaces {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  .enlaces a {
+  .container .card .card-body .formulario .form-enlaces a {
     padding: 5px 0px;
   }
+  .container .card .card-body .politicas {
+    padding: 8px 50px;
+  }
 }
-@media (min-width: 242px) and (min-height: 793px) {
+@media (max-width: 320px) {
   body {
-    height: 100vh;
-    margin: 0;
-    padding: 0;
+    background: #ffffff;
   }
-}
-@media (max-width: 300px) {
-  .logo h1 {
-    text-align: center;
-    font-size: 1.9em;
-    margin-bottom: 0px;
-  }
-  .logo a img {
-    width: 100px;
-  }
-  .form-group label {
-    font-size: 0.9em;
-  }
-  .boton button {
-    font-size: 0.9em;
-  }
-  .enlaces a {
+  .container .card .card-body .formulario .form-group label {
     font-size: 0.8em;
   }
-  .politicas {
+  .container .card .card-body .formulario .form-boton button {
+    font-size: 0.8em;
+  }
+  .container .card .card-body .formulario .form-enlaces a {
+    font-size: 0.8em;
+  }
+  .container .card .card-body .politicas {
     margin-top: 10px;
-    font-size: 0.7em;
+    font-size: 0.6em;
   }
-  .redes {
+  .container .card .card-body .redes {
     margin-top: 15px;
-  }
-  .redes a img {
-    width: 25px;
   }
 }
 @media (max-width: 950px) and (max-height: 420px) {
-  .card {
-    border: none;
-  }
   body {
     background: #ffffff;
   }
   .container {
     min-width: 100%;
   }
-  .card {
+  .container .card {
     padding: 0;
     border: none;
     min-width: 100%;
   }
-  .boton {
-    margin-top: 15px;
-  }
-  .enlaces {
+  .container .card .card-body .formulario .form-enlaces {
     margin-top: 20px;
     margin-bottom: 20px;
   }
-  .politicas {
+  .container .card .card-body .politicas {
     padding: 0px 100px;
+  }
+}
+@media (min-width: 230px) and (min-height: 740px) {
+  body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
   }
 }
 

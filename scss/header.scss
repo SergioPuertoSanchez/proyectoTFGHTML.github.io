@@ -1,0 +1,171 @@
+@import "v-globales";
+
+.cabecera{
+    display: flex;
+    flex-direction: row;
+    position: sticky;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+    top: 0;
+	z-index: 1;      
+    background-color: $color-fondo;
+    width: 100%;  
+    
+    .usuario{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin-left: 15px; 
+        margin-top: 10px;
+        margin-bottom: 10px;
+
+        img{
+            width: 80px;
+            margin-right: 15px;           
+        }
+          
+        .datos__nick{
+            margin: 0 auto;
+            font-size: 2.5em;
+        }
+        
+        .datos__nombre{
+            font-size: 1.1em;
+        }
+    }
+
+    .navbar{
+        align-items: center;
+        justify-content: center;
+    
+        button{              
+            background-color: $color-blanco;
+            
+            img{
+                width: 40px;
+                height: 40px;
+            }
+        }  
+        
+        #menu{
+            align-items: center;
+            justify-content: center;
+            
+            .nav-link{   
+                @include efecto-elemento;    
+                font-size: 1.2em;              
+                color: $color-principal;
+                padding: 0px 20px;                
+            }
+        }
+    }
+
+    .cerrar-sesion{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin-right: 35px; 
+        
+        a{
+            @include efecto-elemento;
+            text-decoration: none;
+            font-size: 1.2em;              
+            color: $color-negro;                       
+        }
+
+        i{
+            margin-right: 10px;       
+        }
+    }
+}
+
+@media (max-width: 1328px) { 
+    .cabecera .navbar{
+        order: 3;
+        background-color: $color-principal;
+        width: 100%;
+
+        #menu{            
+            .nav-link{       
+                font-size: 1.2em;              
+                color: $color-blanco;
+                padding: 0px 30px;
+            }       
+        }
+    }
+}
+
+@media (max-width: 968px) {  
+    .cabecera .navbar{
+        #menu{                      
+            .nav-link{                     
+                font-size: 1.2em;              
+                color: $color-blanco;
+                padding: 0px 18px;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {  
+    .cabecera .navbar{
+        button{  
+            margin: 5px 0px;            
+            background-color: $color-blanco;
+            
+            img{
+                width: 30px;
+                height: 30px;
+            }
+        }  
+
+        #menu{ 
+            text-align: center;  
+
+            .nav-link{       
+                font-size: 1.2em;              
+                color: $color-blanco;
+                padding: 0px 18px;
+                margin: 8px 0px;
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {  
+    .cabecera .usuario{
+        order:2;
+        width: 100%;
+        margin-left: 0px;
+
+        a{
+            img{
+                width: 100px;
+            }
+        }
+        
+        .datos__nick{
+            font-size: 1.8em;
+        }
+        
+        .datos__nombre{
+            font-size: 1em;
+        }
+    }
+    .cabecera .cerrar-sesion{
+        width: 100%;
+        margin-right: 0px;
+        margin-top: 20px;
+
+        a{
+            font-size: 1em;  
+        }
+
+        img{
+            width: 25px;
+            margin-right: 8px;      
+        }
+    }
+}
